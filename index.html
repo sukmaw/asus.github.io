@@ -209,6 +209,14 @@
 		var index = 1;
 		var test = 1;
 		
+		var autoslide = setInterval(function(){ 
+			var lokasi = "images/as" + index + ".jpg";
+			document.getElementById("gambarnya").src = lokasi; 
+			index++; 
+			if(index > 2){ 
+				index = 0; 
+			} 
+		}, 3000);
 		$(document).ready(function(){
 			var scroll_start = 0;
 			var startchange = $('.paralaks-footer');
@@ -246,14 +254,6 @@
 				} // End if
 			});
 			$(".navsmooth").addClass = "active";
-			var autoslide = setInterval(function(){ 
-				var lokasi = "images/as" + index + ".jpg";
-				document.getElementById("gambarnya").src = lokasi; 
-				index++; 
-				if(index > 2){ 
-					index = 0; 
-				} 
-			}, 3000);
 		});
 	</script>
 </body>
