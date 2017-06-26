@@ -7,6 +7,16 @@
 	<!--Import Google Icon Font-->
 	<link href="materialize/css/material-icons.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
+	<script>
+		var autoslide = setInterval(function(){ 
+			var lokasi = "images/as" + index + ".jpg";
+			document.getElementById("gambarnya").src = lokasi; 
+			index++; 
+			if(index > 2){ 
+				index = 0; 
+			} 
+		}, 3000);
+	</script>
 	<!--Import materialize.css-->
 	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 	
@@ -245,16 +255,6 @@
 			});
 			$(".navsmooth").addClass = "active";
 		});
-		window.onload = function(){
-			var autoslide = setInterval(function(){ 
-				var lokasi = "images/as" + index + ".jpg";
-				document.getElementById("gambarnya").src = lokasi; 
-				index++; 
-				if(index > 2){ 
-					index = 0; 
-				} 
-			}, 3000);
-		};
 	</script>
 </body>
 </html>
