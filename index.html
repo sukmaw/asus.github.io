@@ -209,7 +209,7 @@
 		var waktu = 3000;
 		
 		$(window).on("load", function(){
-			$('#css').on("load", function(){
+			$('#css').ready(function(){
 				var autoslide = setInterval(function(){
 					var lokasi = "images/as" + index + ".jpg";
 					$("#gambarnya").attr("src", lokasi); 
