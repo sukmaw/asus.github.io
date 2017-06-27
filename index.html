@@ -208,10 +208,8 @@
 		var test = 1;
 		var waktu = 3000;
 		
-		$(document).ready(function(){
+		$(window).on("load", function(){
 			$('#css').ready(function(){
-				$('#gambarnya').attr("src", "images/as1.jpg");
-				index = 2;
 				var autoslide = setInterval(function(){
 					var lokasi = "images/as" + index + ".jpg";
 					$("#gambarnya").attr("src", lokasi); 
