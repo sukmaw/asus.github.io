@@ -209,16 +209,14 @@
 		var waktu = 3000;
 		
 		$(window).on("load", function(){
-			$('#css').ready(function(){
-				var autoslide = setInterval(function(){
-					var lokasi = "images/as" + index + ".jpg";
-					$("#gambarnya").attr("src", lokasi); 
-					index++; 
-					if(index > 2){ 
-						index = 0; 
-					} 
-				}, waktu);
-			});
+			var autoslide = setInterval(function(){
+				var lokasi = "images/as" + index + ".jpg";
+				$("#gambarnya").attr("src", lokasi); 
+				index++; 
+				if(index > 2){ 
+					index = 0; 
+				} 
+			}, waktu);
 			var scroll_start = 0;
 			var startchange = $('.paralaks-footer');
 			var offset = startchange.offset();
