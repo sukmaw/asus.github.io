@@ -6,7 +6,7 @@
 	<link rel="shortcut icon" href="images/ASUS_Logo.svg.png" type="image/x-icon">
 	<!--Import Google Icon Font-->
 	<link href="materialize/css/material-icons.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css">
+	<link id="css" rel="stylesheet" href="css/styles.css">
 	<!--Import materialize.css-->
 	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 	
@@ -208,15 +208,16 @@
 		var test = 1;
 		
 		$(document).ready(function(){
-			var autoslide = setInterval(function(){ 
-				console.log(index);
-				var lokasi = "images/as" + index + ".jpg";
-				document.getElementById("gambarnya").src = lokasi; 
-				index++; 
-				if(index > 2){ 
-					index = 0; 
-				} 
-			}, 3000);
+			$('#css').ready(function(){
+				var autoslide = setInterval(function(){
+					var lokasi = "images/as" + index + ".jpg";
+					document.getElementById("gambarnya").src = lokasi; 
+					index++; 
+					if(index > 2){ 
+						index = 0; 
+					} 
+				}, 3000);
+			});
 			var scroll_start = 0;
 			var startchange = $('.paralaks-footer');
 			var offset = startchange.offset();
