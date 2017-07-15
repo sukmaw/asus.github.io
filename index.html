@@ -211,9 +211,9 @@
 		$(window).on("load", function(){
 			$('.awal').css('animation', 'fade 3s infinite');
 			var autoslide = setInterval(function(){
-				var paralaks = $('.awal'), newone = paralaks.clone(true);
-				paralaks.before(newone);
-				$("." + paralaks.attr("class") + ":last").remove();
+				<!-- var paralaks = $('.awal'), newone = paralaks.clone(true); -->
+				<!-- paralaks.before(newone); -->
+				<!-- $("." + paralaks.attr("class") + ":last").remove(); -->
 				var lokasi = "images/as" + index + ".jpg";
 				$("#gambarnya").attr("src", lokasi); 
 				index++; 
